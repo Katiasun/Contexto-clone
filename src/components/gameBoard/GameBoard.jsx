@@ -17,6 +17,9 @@ export default function GameBoard() {
     return (correctCharacters / totalCharacters) * 100;
   }
 
+  function generateNewWord() {
+    return "newWord";
+  }
   return (
     <div className={styles.gameBoard}>
       <h2>Guess the Word !</h2>
