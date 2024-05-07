@@ -9,13 +9,6 @@
 .gameBoard h2 {
   margin-bottom: 20px;
 }
-.gameBoard input {
-  width: 70%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #f72e2e;
-  border-radius: 5px;
-}
 .scoreboard {
   margin-bottom: 20px;
   height: 25px;
@@ -45,9 +38,9 @@
   color: #fff;
   border: none;
   border-radius: 5px;
-  background: #007bff;
+  background: #ff5100;
   transition: background-color 0.3s ease;
 }
 .boardBtn:hover {
-  background: #0056b3;
+  background: #b33900;
 }
