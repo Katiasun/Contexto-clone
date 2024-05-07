@@ -9,6 +9,14 @@ export default function GameBoard() {
     setGuessedWord(event.target.value);
   }
 
+  function calculateAccuracy() {
+    const totalCharacters = correctWord.length;
+    const correctCharacters = guessedWord
+      .split("")
+      .filter((char, index) => char === correctWord[index]).length;
+    return (correctCharacters / totalCharacters) * 100;
+  }
+
   return (
     <div className={styles.gameBoard}>
       <h2>Guess the Word !</h2>
