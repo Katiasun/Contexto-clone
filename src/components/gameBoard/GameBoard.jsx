@@ -28,8 +28,8 @@ export default function GameBoard() {
       />
 
       <div className={styles.scoreboard}>
-        <div className={styles.accuracyLine}></div>
-        <div className={styles.accuracyText}></div>
+        <div className={styles.accuracyLine} style={{ width: `${calculateAccuracy()}%` }}></div>
+        <div className={styles.accuracyText}>{`${calculateAccuracy()}%`}</div>
       </div>
     </div>
   );

@@ -1,0 +1,37 @@
+.gameBoard {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+.gameBoard h2 {
+  margin-bottom: 20px;
+}
+.gameBoard input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.scoreboard {
+  margin-bottom: 20px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 5px;
+}
+.accuracyLine {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+.accuracyText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.8rem;
+}
