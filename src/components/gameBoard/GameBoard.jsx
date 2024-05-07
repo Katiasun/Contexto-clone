@@ -18,8 +18,16 @@ export default function GameBoard() {
   }
 
   function generateNewWord() {
+    // Logic to generate a new word (e.g., from a predefined list or from an API call)
     return "newWord";
   }
+
+  function handleNewRound() {
+    const newWord = generateNewWord();
+    setCorrectWord(newWord);
+    setGuessedWord("");
+  }
+
   return (
     <div className={styles.gameBoard}>
       <h2>Guess the Word !</h2>
@@ -34,6 +42,7 @@ export default function GameBoard() {
         <div className={styles.accuracyLine} style={{ width: `${calculateAccuracy()}%` }}></div>
         <div className={styles.accuracyText}>{`${calculateAccuracy()}%`}</div>
       </div>
+      <button onClick={handleNewRound}>Start New Round</button>
     </div>
   );
 }
