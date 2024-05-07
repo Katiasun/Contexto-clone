@@ -1,0 +1,19 @@
+.scoreboard {
+  margin-bottom: 20px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 5px;
+}
+.accuracyLine {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+.accuracyText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.8rem;
+}
