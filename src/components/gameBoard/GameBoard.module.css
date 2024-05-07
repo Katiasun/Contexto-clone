@@ -1,8 +1,8 @@
 .gameBoard {
-  max-width: 600px;
+  min-width: 500px;
   margin: 30px auto 0;
   padding: 20px;
-  border: 2px solid #333;
+  border: 2px solid #9e1818;
   border-radius: 10px;
   background: #f9f9f9;
 }
@@ -10,10 +10,10 @@
   margin-bottom: 20px;
 }
 .gameBoard input {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #f72e2e;
   border-radius: 5px;
 }
 .scoreboard {
