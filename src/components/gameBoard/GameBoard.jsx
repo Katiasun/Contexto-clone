@@ -42,7 +42,9 @@ export default function GameBoard() {
         <div className={styles.accuracyLine} style={{ width: `${calculateAccuracy()}%` }}></div>
         <div className={styles.accuracyText}>{`${calculateAccuracy()}%`}</div>
       </div>
-      <button onClick={handleNewRound}>Start New Round</button>
+      <button className={styles.boardBtn} onClick={handleNewRound}>
+        Start New Round
+      </button>
     </div>
   );
 }

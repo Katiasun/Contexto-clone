@@ -35,3 +35,19 @@
   color: #fff;
   font-size: 0.8rem;
 }
+.boardBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  transition: background-color 0.3s ease;
+}
+.boardBtn:hover {
+  background: #0056b3;
+}
