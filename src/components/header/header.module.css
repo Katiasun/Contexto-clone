@@ -1,3 +1,15 @@
 .header {
-  color: pink;
+  color: #fff;
+  background: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  filter: opacity(0.4);
+}
+.headerTitle {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.headerDescription {
+  font-size: 1rem;
 }
