@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./GameBoard.module.css";
 import PlayerInput from "../playerInput/PlayerInput";
+import Scoreboard from "../scoreboard/Scoreboard";
 
 export default function GameBoard() {
   const [guessedWord, setGuessedWord] = useState("");
@@ -34,10 +35,8 @@ export default function GameBoard() {
       <h2>Guess the Word !</h2>
       <PlayerInput value={guessedWord} onChange={handleInputChange} />
 
-      <div className={styles.scoreboard}>
-        <div className={styles.accuracyLine} style={{ width: `${calculateAccuracy()}%` }}></div>
-        <div className={styles.accuracyText}>{`${calculateAccuracy()}%`}</div>
-      </div>
+      <Scoreboard accuracy={calculateAccuracy()} />
+
       <button className={styles.boardBtn} onClick={handleNewRound}>
         Start New Round
       </button>
