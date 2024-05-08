@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./GameBoard.module.css";
 import PlayerInput from "../playerInput/PlayerInput";
 import Scoreboard from "../scoreboard/Scoreboard";
@@ -6,6 +6,12 @@ import Scoreboard from "../scoreboard/Scoreboard";
 export default function GameBoard() {
   const [guessedWord, setGuessedWord] = useState("");
   const [correctWord, setCorrectWord] = useState("example");
+
+  useEffect(() => {
+    fetchWord();
+  }, []);
+
+  function fetchWord() {}
 
   function handleInputChange(event) {
     setGuessedWord(event.target.value);
