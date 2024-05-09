@@ -46,6 +46,12 @@ export default function GameBoard() {
       <h2>Guess the Word !</h2>
       <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
 
+      <div className={styles.typeWords}>
+        {typeWords.map((word, index) => {
+          <div key={index}>{word}</div>;
+        })}
+      </div>
+
       <Scoreboard accuracy={calculateAccuracy()} />
 
       <button className={styles.boardBtn} onClick={handleNewRound}>
