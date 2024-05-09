@@ -6,8 +6,10 @@ import DropDownMenu from "./components/dropDownMenu/DropDownMenu.jsx";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <DropDownMenu />
+      <div className="headerContainer">
+        <Header />
+        <DropDownMenu />
+      </div>
       <GameBoard />
     </div>
   );
