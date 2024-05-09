@@ -18,6 +18,9 @@ export default function GameBoard() {
     setGuessedWord(event.target.value);
   }
 
+  function handleEnter(word) {
+    setTypeWords([...typeWords, word]);
+  }
   function calculateAccuracy() {
     const totalCharacters = correctWord.length;
     const correctCharacters = guessedWord
