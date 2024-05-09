@@ -6,6 +6,7 @@ import Scoreboard from "../scoreboard/Scoreboard";
 export default function GameBoard() {
   const [guessedWord, setGuessedWord] = useState("");
   const [correctWord, setCorrectWord] = useState("example");
+  const [typeWords, setTypeWords] = useState([]);
 
   useEffect(() => {
     fetchWord();
@@ -17,6 +18,9 @@ export default function GameBoard() {
     setGuessedWord(event.target.value);
   }
 
+  function handleEnter(word) {
+    setTypeWords([...typeWords, word]);
+  }
   function calculateAccuracy() {
     const totalCharacters = correctWord.length;
     const correctCharacters = guessedWord
@@ -33,13 +37,19 @@ export default function GameBoard() {
   function handleNewRound() {
     const newWord = generateNewWord();
     setCorrectWord(newWord);
-    setGuessedWord("");
+    setTypeWords([]);
   }
 
   return (
     <div className={styles.gameBoard}>
       <h2>Guess the Word !</h2>
-      <PlayerInput value={guessedWord} onChange={handleInputChange} />
+      <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
+
+      <div className={styles.typeWords}>
+        {typeWords.map((word, index) => (
+          <div key={index}>{word}</div>
+        ))}
+      </div>
 
       <Scoreboard accuracy={calculateAccuracy()} />
 
