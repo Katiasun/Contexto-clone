@@ -6,6 +6,7 @@ import Scoreboard from "../scoreboard/Scoreboard";
 export default function GameBoard() {
   const [guessedWord, setGuessedWord] = useState("");
   const [correctWord, setCorrectWord] = useState("example");
+  const [typeWords, setTypeWords] = useState([]);
 
   useEffect(() => {
     fetchWord();
