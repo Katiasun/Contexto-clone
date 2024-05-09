@@ -34,7 +34,7 @@ export default function GameBoard() {
   function handleNewRound() {
     const newWord = generateNewWord();
     setCorrectWord(newWord);
-    setGuessedWord("");
+    setTypeWords([]);
   }
 
   return (
