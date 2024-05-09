@@ -44,7 +44,7 @@ export default function GameBoard() {
   return (
     <div className={styles.gameBoard}>
       <h2>Guess the Word !</h2>
-      <PlayerInput value={guessedWord} onChange={handleInputChange} />
+      <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
 
       <Scoreboard accuracy={calculateAccuracy()} />
 
