@@ -1,7 +1,24 @@
-.playerInput {
-  width: 70%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #f72e2e;
-  border-radius: 5px;
+/* Styles for mobile version */
+@media only screen and (max-width: 414px) {
+  .playerInput {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #f72e2e;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}
+
+/* Styles for desktop */
+@media only screen and (min-width: 768px) {
+  .playerInput {
+    width: 50%;
+    margin: 20px auto;
+    padding: 16px;
+    font-size: 18px;
+    border: 2px solid #f72e2e;
+    border-radius: 8px;
+  }
 }
