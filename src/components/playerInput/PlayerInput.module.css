@@ -1,14 +1,12 @@
 /* Styles for mobile version */
-@media only screen and (max-width: 414px) {
-  .playerInput {
-    width: 90%;
-    margin: 10px auto;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #f72e2e;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
+.playerInput {
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #f72e2e;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 /* Styles for desktop */
@@ -18,7 +16,6 @@
     margin: 20px auto;
     padding: 16px;
     font-size: 18px;
-    border: 2px solid #f72e2e;
     border-radius: 8px;
   }
 }
