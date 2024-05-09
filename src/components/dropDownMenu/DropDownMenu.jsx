@@ -21,7 +21,7 @@ export default function DropDownMenu() {
       </div>
 
       {isOpen && (
-        <div className={styles.dropDownList}>
+        <div className={`${styles.dropDownList} ${isOpen && styles.show}`}>
           <div className={styles.dropDownItem} onClick={handleItemClick}>
             How to play
           </div>
