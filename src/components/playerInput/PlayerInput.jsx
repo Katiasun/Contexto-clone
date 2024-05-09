@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./PlayerInput.module.css";
 
-export default function PlayerInput({ value, onChange, onEnter }) {
-  function handleKeyPress(event) {
+export default function PlayerInput({ onChange, onEnter }) {
+  const [inputValue, setInputValue] = useState("");
+
+  function handleKeyDown(event) {
     if (event.key === "Enter") {
-      onEnter(value);
+      onEnter(inputValue);
+      setInputValue("");
     }
   }
 
@@ -13,9 +16,9 @@ export default function PlayerInput({ value, onChange, onEnter }) {
       className={styles.playerInput}
       type="text"
       placeholder="Enter your guess..."
-      value={value}
-      onChange={onChange}
-      onKeyDown={handleKeyPress}
+      value={inputValue}
+      onChange={(e) => setInputValue(e.target.value)}
+      onKeyDown={handleKeyDown}
     />
   );
 }

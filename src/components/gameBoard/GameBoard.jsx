@@ -20,7 +20,6 @@ export default function GameBoard() {
 
   function handleEnter(word) {
     setTypeWords([...typeWords, word]);
-    setGuessedWord("");
   }
   function calculateAccuracy() {
     const totalCharacters = correctWord.length;
@@ -47,9 +46,9 @@ export default function GameBoard() {
       <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
 
       <div className={styles.typeWords}>
-        {typeWords.map((word, index) => {
-          <div key={index}>{word}</div>;
-        })}
+        {typeWords.map((word, index) => (
+          <div key={index}>{word}</div>
+        ))}
       </div>
 
       <Scoreboard accuracy={calculateAccuracy()} />
