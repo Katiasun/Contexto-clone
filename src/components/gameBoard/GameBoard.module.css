@@ -1,17 +1,13 @@
 .gameBoard {
-  min-width: 500px;
-  margin: 30px auto 0;
-  padding: 20px;
+  background: #f9f9f9;
   border: 2px solid #9e1818;
   border-radius: 10px;
-  background: #f9f9f9;
-}
-.gameBoard h2 {
-  margin-bottom: 20px;
+  padding: 20px;
+  margin: 0 auto;
 }
 .boardBtn {
-  display: inline-block;
-  padding: 10px 20px;
+  padding: 15px;
+  margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -24,4 +20,43 @@
 }
 .boardBtn:hover {
   background: #b33900;
+}
+.gameBoard h2 {
+  margin-bottom: 20px;
+}
+
+/* Styles for mobile */
+@media only screen and (max-width: 390px) {
+  .gameBoard {
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .boardBtn {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Styles for iPhone Pro Max */
+@media only screen and (min-width: 428px) {
+  .gameBoard {
+    width: 90%;
+  }
+}
+
+/* Styles for desktop */
+@media only screen and (min-width: 768px) {
+  .gameBoard {
+    width: 50%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .boardBtn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 30px;
+    font-size: 18px;
+  }
 }
