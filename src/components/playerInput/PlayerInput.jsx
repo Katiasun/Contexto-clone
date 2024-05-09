@@ -15,6 +15,7 @@ export default function PlayerInput({ value, onChange, onEnter }) {
       placeholder="Enter your guess..."
       value={value}
       onChange={onChange}
+      onKeyDown={handleKeyPress}
     />
   );
 }
