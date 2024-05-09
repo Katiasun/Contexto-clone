@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./PlayerInput.module.css";
 
-export default function PlayerInput({ value, onChange }) {
+export default function PlayerInput({ value, onChange, onEnter }) {
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      onEnter(value);
+    }
+  }
+
   return (
     <input
       className={styles.playerInput}
