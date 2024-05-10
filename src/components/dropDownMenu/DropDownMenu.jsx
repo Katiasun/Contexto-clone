@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./DropDownMenu.module.css";
-import { AiOutlineEllipsis } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 export default function DropDownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function DropDownMenu() {
   return (
     <div className={styles.dropDownContainer}>
       <div className={styles.dropDownTrigger} onClick={toggleDropDown}>
-        <AiOutlineEllipsis />
+        <FontAwesomeIcon icon={faEllipsisV} className={styles.customIco} />
       </div>
 
       {isOpen && (
