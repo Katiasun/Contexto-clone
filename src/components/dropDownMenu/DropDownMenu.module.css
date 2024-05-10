@@ -28,6 +28,13 @@
 .dropDownItem.active {
   background-color: #e0e0e0;
 }
+.customIco {
+  color: #423232;
+  width: 20px;
+  height: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
 
 /* Style for desktop */
 @media screen and (min-width: 768px) {
@@ -39,5 +46,9 @@
   }
   .dropDownItem:hover {
     background: #f1f1f1;
+  }
+  .customIco {
+    width: 30px;
+    height: 30px;
   }
 }
