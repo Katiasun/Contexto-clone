@@ -14,13 +14,15 @@ function App() {
         <DropDownMenu />
       </div>
       <GameBoard />
-      <div className="modalTitle">
-        <CiSquareQuestion />
-        <h2>FAQ</h2>
+      <div className="accordionWrapper">
+        <div className="modalTitle">
+          <CiSquareQuestion />
+          <h2>FAQ</h2>
+        </div>
+        {accordionData.map(({ title, content }, index) => (
+          <FAQaccordion key={index} title={title} content={content} />
+        ))}
       </div>
-      {accordionData.map(({ title, content }, index) => (
-        <FAQaccordion key={index} title={title} content={content} />
-      ))}
     </div>
   );
 }
