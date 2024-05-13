@@ -12,9 +12,6 @@
   border-radius: 16px;
   padding: 5px;
 }
-.dropDownTrigger:hover {
-  background-color: rgba(117, 47, 26, 0.253);
-}
 .dropDownList {
   display: none;
   position: absolute;
@@ -62,6 +59,9 @@
   .dropDownItem:hover {
     background: #f5d8d871;
     border-radius: 15px;
+  }
+  .dropDownTrigger:hover {
+    background-color: rgba(117, 47, 26, 0.253);
   }
   .customIco {
     width: 30px;

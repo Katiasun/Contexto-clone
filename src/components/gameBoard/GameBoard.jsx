@@ -47,11 +47,13 @@ export default function GameBoard() {
 
       <div className={styles.typeWords}>
         {typeWords.map((word, index) => (
-          <div key={index}>{word}</div>
+          <div key={index} className={styles.appearedWord}>
+            {word}
+          </div>
         ))}
       </div>
 
-      <Scoreboard accuracy={calculateAccuracy()} />
+      {/* <Scoreboard accuracy={calculateAccuracy()} /> */}
 
       <button className={styles.boardBtn} onClick={handleNewRound}>
         Start New Round
