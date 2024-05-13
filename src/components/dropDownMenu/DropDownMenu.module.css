@@ -10,7 +10,6 @@
   transition: background-color 0.3s ease;
   background: transparent;
   border-radius: 16px;
-  padding: 5px;
 }
 .dropDownList {
   display: none;
