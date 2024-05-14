@@ -9,8 +9,7 @@
   width: 500px;
 }
 .item {
-  margin-bottom: 10px;
-  padding: 10px 20px;
+  padding: 3px 20px;
 }
 .title {
   display: flex;
@@ -18,13 +17,22 @@
   align-items: center;
   cursor: pointer;
 }
+.title h3 {
+  font-size: 0.9rem;
+}
 .content {
   height: auto;
   text-align: left;
 }
 /* Style for desktop */
 @media screen and (min-width: 768px) {
+  .wrapper {
+    width: 75vw;
+  }
   .accordion {
-    width: 50%;
+    width: 47%;
+  }
+  .title h3 {
+    font-size: 1rem;
   }
 }
