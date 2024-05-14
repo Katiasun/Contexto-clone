@@ -3,7 +3,7 @@
   background: #f9f9f9;
   border: 2px solid #9e1818;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5px;
   margin: 0 auto;
   width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,20 +29,6 @@
 .gameBoard h2 {
   margin-bottom: 20px;
 }
-/* .typeWords {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #423232;
-  margin: 0 -3px;
-} */
-/* .appearedWord {
-  background: #f4ede2;
-  font-weight: bold;
-  border-radius: 8px;
-   height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
