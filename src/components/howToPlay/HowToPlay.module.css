@@ -1,6 +1,27 @@
+/* Styles for mobile version */
 .container {
-  padding: 5px;
-  margin-top: 100px;
+  padding: 10px;
+  margin: 15px;
   border-radius: 5px;
   background: #f4ede2;
+  text-align: left;
+}
+.title h2 {
+  font-size: 1rem;
+}
+.text p {
+  font-size: 0.8rem;
+}
+
+/* Styles for desktop version */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 30%;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+  }
+  .text p {
+    font-size: 1rem;
+  }
 }
