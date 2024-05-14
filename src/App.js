@@ -3,6 +3,7 @@ import Header from "./components/header/Header.jsx";
 import GameBoard from "./components/gameBoard/GameBoard.jsx";
 import DropDownMenu from "./components/dropDownMenu/DropDownMenu.jsx";
 import FAQaccordion from "./components/FAQaccordion/FAQaccordion.jsx";
+import HowToPlay from "./components/howToPlay/HowToPlay.jsx";
 import { CiSquareQuestion } from "react-icons/ci";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <DropDownMenu />
       </div>
       <GameBoard />
+      <HowToPlay />
       <div className="accordionWrapper">
         <div className="modalTitle">
           <CiSquareQuestion />
