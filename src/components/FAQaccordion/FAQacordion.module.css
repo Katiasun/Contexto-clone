@@ -17,6 +17,9 @@
   align-items: center;
   cursor: pointer;
 }
+.title h3 {
+  font-size: 0.9rem;
+}
 .content {
   height: auto;
   text-align: left;
@@ -27,6 +30,9 @@
     width: 75vw;
   }
   .accordion {
-    width: 50%;
+    width: 47%;
+  }
+  .title h3 {
+    font-size: 1rem;
   }
 }
