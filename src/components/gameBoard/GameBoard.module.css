@@ -3,17 +3,17 @@
   background: #f9f9f9;
   border: 2px solid #9e1818;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5px;
   margin: 0 auto;
   width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .boardBtn {
-  width: 70%;
+  width: 50%;
   display: inline-block;
-  padding: 15px;
-  margin-top: 20px;
-  font-size: 16px;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 15px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
@@ -27,35 +27,25 @@
   background: #b33900;
 }
 .gameBoard h2 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-size: 1rem;
 }
-/* .typeWords {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #423232;
-  margin: 0 -3px;
-} */
-/* .appearedWord {
-  background: #f4ede2;
-  font-weight: bold;
-  border-radius: 8px;
-   height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
   .gameBoard {
-    width: 50%;
-    padding: 40px;
+    width: 35%;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   .boardBtn {
-    width: 50%;
-    padding: 15px 30px;
+    width: 55%;
+    padding: 13px 5px;
     margin-top: 30px;
-    font-size: 18px;
+    font-size: 17px;
+  }
+  .gameBoard h2 {
+    font-size: 1.2rem;
   }
 }
