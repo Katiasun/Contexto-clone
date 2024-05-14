@@ -49,9 +49,6 @@
   .dropDownContainer {
     display: inline-block;
   }
-  .dropDownTrigger {
-    margin-left: 15px;
-  }
   .dropDownList {
     right: 0;
   }
