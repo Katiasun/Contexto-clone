@@ -1,0 +1,27 @@
+/* Style for mobile version */
+.wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+  width: 500px;
+}
+.item {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.content {
+  height: auto;
+  text-align: left;
+}
+/* Style for desktop */
+@media screen and (min-width: 768px) {
+}
