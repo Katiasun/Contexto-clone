@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./HowToPlay.module.css";
+import { FaRegCircleQuestion } from "react-icons/fa6";
 
 export default function HowToPlay() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
+        <FaRegCircleQuestion />
         <h2>How to play</h2>
       </div>
       <div className={styles.text}>

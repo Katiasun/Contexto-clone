@@ -1,13 +1,20 @@
 /* Styles for mobile version */
 .container {
+  width: 350px;
   padding: 10px;
   margin: 15px;
   border-radius: 5px;
   background: #f4ede2;
   text-align: left;
 }
+.title {
+  display: flex;
+  align-items: center;
+}
 .title h2 {
   font-size: 1rem;
+  font-weight: bold;
+  margin-left: 6px;
 }
 .text p {
   font-size: 0.8rem;
@@ -15,11 +22,9 @@
 
 /* Styles for desktop version */
 @media screen and (min-width: 768px) {
-  .container {
-    width: 30%;
-  }
   .title h2 {
     font-size: 1.5rem;
+    margin-left: 10px;
   }
   .text p {
     font-size: 1rem;
