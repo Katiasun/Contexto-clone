@@ -1,8 +1,8 @@
 /* Styles for mobile version */
 .playerInput {
-  width: 90%;
+  width: 80%;
   margin: 10px auto;
-  padding: 12px;
+  padding: 5px;
   font-size: 16px;
   border: 1px solid #f72e2e;
   border-radius: 5px;
@@ -14,9 +14,9 @@
 @media only screen and (min-width: 768px) {
   .playerInput {
     width: 50%;
-    margin: 20px auto;
-    padding: 16px;
-    font-size: 18px;
+    margin: 5px auto;
+    padding: 7px;
+    font-size: 17px;
     border-radius: 8px;
   }
 }
