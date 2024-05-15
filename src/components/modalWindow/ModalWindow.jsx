@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./ModalWindow.module.css";
 import data from "./data.js";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 export default function ModalWindow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,11 +36,19 @@ export default function ModalWindow() {
         <div className={styles.modalBackdrop} onClick={handleOutsideClick}>
           <div className={styles.modalContent}>
             <button className={styles.closeButton} onClick={handleClose}>
-              &times
+              <IoCloseCircleOutline />
             </button>
             <ul>
-              {data.map((item, index) => (
-                <li key={index}>{item}</li>
+              {data.map((item) => (
+                <li key={item.id} onClick={() => toggleAccordionClick(item.id)}>
+                  <div className={styles.accordionTitle}>
+                    <h3>{item.title}</h3>
+                    {accordionOpen === item.id ? <FaMinus /> : <FaPlus />}
+                  </div>
+                  {accordionOpen === item.id && (
+                    <div className={styles.accordionConetnet}>{item.text}</div>
+                  )}
+                </li>
               ))}
             </ul>
           </div>
