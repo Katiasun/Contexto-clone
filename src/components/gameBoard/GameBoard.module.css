@@ -5,7 +5,7 @@
   border-radius: 10px;
   padding: 5px;
   margin: 0 auto;
-  width: 80%;
+  width: 65%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .boardBtn {
@@ -40,7 +40,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   .boardBtn {
-    width: 55%;
+    width: 45%;
     padding: 13px 5px;
     margin-top: 30px;
     font-size: 17px;
@@ -52,6 +52,6 @@
 
 @media only screen and (min-width: 1024px) {
   .gameBoard {
-    width: 23%;
+    width: 25%;
   }
 }
