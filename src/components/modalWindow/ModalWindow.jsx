@@ -4,6 +4,7 @@ import data from "./data.js";
 
 export default function ModalWindow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [accordionOpen, setAccordionOpen] = useState(null);
 
   function toggleModal() {
     setIsModalOpen(!isModalOpen);
