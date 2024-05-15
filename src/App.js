@@ -4,6 +4,7 @@ import GameBoard from "./components/gameBoard/GameBoard.jsx";
 import DropDownMenu from "./components/dropDownMenu/DropDownMenu.jsx";
 import FAQaccordion from "./components/FAQaccordion/FAQaccordion.jsx";
 import HowToPlay from "./components/howToPlay/HowToPlay.jsx";
+import ModalWindow from "./components/modalWindow/ModalWindow.jsx";
 import { CiSquareQuestion } from "react-icons/ci";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <h2>FAQ</h2>
         </div>
         <FAQaccordion />
+        <ModalWindow />
       </div>
     </div>
   );

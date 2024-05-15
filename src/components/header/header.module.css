@@ -1,6 +1,8 @@
 /* Styles for mobile version */
 .header {
+  width: 80%;
   margin-bottom: 7px;
+  margin-right: 4px;
   color: #fff;
   background: #333;
   padding: 8px;
@@ -19,13 +21,19 @@
 /* Styles for desktop version */
 @media screen and (min-width: 768px) {
   .header {
+    width: 55%;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 5px;
   }
   .headerTitle {
     font-size: 1.5rem;
   }
   .headerDescription {
     font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 27%;
   }
 }
