@@ -20,6 +20,10 @@ export default function ModalWindow() {
     }
   }
 
+  function toggleAccordionClick(id) {
+    setAccordionOpen(accordionOpen === id ? null : id);
+  }
+
   return (
     <>
       <button onClick={toggleModal} className={styles.modalBtn}>
