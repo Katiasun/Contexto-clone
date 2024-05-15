@@ -1,0 +1,16 @@
+.modalBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: #423232;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.modalBtn:hover {
+  background: #f4ede2;
+}

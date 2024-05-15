@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ModalWindow.module.css";
+import data from "./data.js";
 
 export default function ModalWindow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function ModalWindow() {
               &times
             </button>
             <ul>
-              {DataTransfer.map((item, index) => (
+              {data.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
