@@ -55,9 +55,9 @@ export default function GameBoard() {
 
       {/* <Scoreboard accuracy={calculateAccuracy()} /> */}
 
-      <button className={styles.boardBtn} onClick={handleNewRound}>
+      {/* <button className={styles.boardBtn} onClick={handleNewRound}>
         Start New Round
-      </button>
+      </button> */}
     </div>
   );
 }

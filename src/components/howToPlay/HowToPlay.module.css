@@ -1,8 +1,8 @@
 /* Styles for mobile version */
 .container {
-  width: 350px;
-  padding: 10px;
-  margin: 15px;
+  width: 85%;
+  padding: 7px;
+  margin: 10px;
   border-radius: 5px;
   background: #f4ede2;
   text-align: left;
@@ -22,11 +22,19 @@
 
 /* Styles for desktop version */
 @media screen and (min-width: 768px) {
+  .container {
+    width: 55%;
+  }
   .title h2 {
     font-size: 1.5rem;
     margin-left: 10px;
   }
   .text p {
     font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 25%;
   }
 }

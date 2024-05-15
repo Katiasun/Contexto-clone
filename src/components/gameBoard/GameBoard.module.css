@@ -5,7 +5,7 @@
   border-radius: 10px;
   padding: 5px;
   margin: 0 auto;
-  width: 80%;
+  width: 65%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .boardBtn {
@@ -34,18 +34,24 @@
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
   .gameBoard {
-    width: 35%;
+    width: 55%;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   .boardBtn {
-    width: 55%;
+    width: 45%;
     padding: 13px 5px;
     margin-top: 30px;
     font-size: 17px;
   }
   .gameBoard h2 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gameBoard {
+    width: 25%;
   }
 }
