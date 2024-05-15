@@ -8,13 +8,36 @@ export default function ModalWindow() {
     setIsModalOpen(!isModalOpen);
   }
 
+  function handleClose() {
+    setIsModalOpen(false);
+  }
+
+  function handleOutsideClick(e) {
+    if (e.target.classList.contains(styles.modalBackdrop)) {
+      setIsModalOpen(false);
+    }
+  }
+
   return (
-    <div>
+    <>
       <button onClick={toggleModal} className={styles.modalBtn}>
         Read more...
       </button>
 
-      {}
-    </div>
+      {isModalOpen && (
+        <div className={styles.modalBackdrop} onClick={handleOutsideClick}>
+          <div className={styles.modalContent}>
+            <button className={styles.closeButton} onClick={handleClose}>
+              &times
+            </button>
+            <ul>
+              {DataTransfer.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
