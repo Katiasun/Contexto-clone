@@ -34,7 +34,7 @@
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
   .gameBoard {
-    width: 35%;
+    width: 55%;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -47,5 +47,11 @@
   }
   .gameBoard h2 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gameBoard {
+    width: 23%;
   }
 }
