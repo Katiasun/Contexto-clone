@@ -1,8 +1,8 @@
 /* Styles for mobile version */
 .container {
   width: 85%;
-  padding: 7px;
-  margin: 10px;
+  padding: 10px;
+  margin-top: 25px;
   border-radius: 5px;
   background: #f4ede2;
   text-align: left;
@@ -17,7 +17,7 @@
   margin-left: 6px;
 }
 .text p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 /* Styles for desktop version */
