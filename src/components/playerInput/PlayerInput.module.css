@@ -1,10 +1,10 @@
 /* Styles for mobile version */
 .playerInput {
-  width: 80%;
-  margin: 10px auto;
-  padding: 5px;
+  width: 100%;
+  margin: 10px auto 20px auto;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #f72e2e;
+  border: 1px solid #6e3232;
   border-radius: 5px;
   box-sizing: border-box;
   outline: none;
@@ -13,10 +13,8 @@
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
   .playerInput {
-    width: 50%;
-    margin: 5px auto;
-    padding: 7px;
+    /* margin: 5px auto; */
+    padding: 15px;
     font-size: 17px;
-    border-radius: 8px;
   }
 }
