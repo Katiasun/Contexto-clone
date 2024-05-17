@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import styles from "./DropDownMenu.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
-import { CiSettings } from "react-icons/ci";
-import { TbMessageCircle } from "react-icons/tb";
-import { FaRegCircleQuestion } from "react-icons/fa6";
-import { BsInfoCircle } from "react-icons/bs";
-import { PiQuestionLight, PiLightbulb, PiFlagThin, PiCalendarBlankLight } from "react-icons/pi";
+import data from "./data.js";
 
 export default function DropDownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +11,7 @@ export default function DropDownMenu() {
     setIsOpen(!isOpen);
   }
 
-  function handleItemClick(item) {
-    console.log(item);
+  function handleItemClick() {
     setIsOpen(false);
   }
 
@@ -28,54 +23,18 @@ export default function DropDownMenu() {
 
       {isOpen && (
         <div className={`${styles.dropDownList} ${isOpen && styles.show}`}>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <PiQuestionLight />
-              <p>How to play</p>
+          {data.map((dataItem) => (
+            <div
+              key={dataItem.id}
+              className={styles.dropDownItem}
+              onClick={() => handleItemClick(dataItem.id)}
+            >
+              <div className={styles.itemContect}>
+                {dataItem.icon}
+                <p>{dataItem.title}</p>
+              </div>
             </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <PiLightbulb />
-              <p>Hint</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <PiFlagThin />
-              <p>Give up</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <PiCalendarBlankLight />
-              <p>Previous games</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <CiSettings />
-              <p>Settings</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <BsInfoCircle />
-              <p>Credits</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <TbMessageCircle />
-              <p>Feedback</p>
-            </div>
-          </div>
-          <div className={styles.dropDownItem} onClick={handleItemClick}>
-            <div className={styles.itemContect}>
-              <FaRegCircleQuestion />
-              <p>FAQ</p>
-            </div>
-          </div>
+          ))}
         </div>
       )}
     </div>
