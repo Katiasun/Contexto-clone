@@ -8,14 +8,13 @@ export default function GameBoard() {
   const [correctWord, setCorrectWord] = useState("example");
   const [typeWords, setTypeWords] = useState([]);
 
-  useEffect(() => {
-    fetchWord();
-  }, []);
-
-  function fetchWord() {}
-
-  function handleInputChange(event) {
-    setGuessedWord(event.target.value);
+  function handleInputChange(word) {
+    // setGuessedWord(event.target.value);
+    const newWordObj = {
+      string: word,
+      parcentage: Math.random() * 100,
+    };
+    setTypeWords([...typeWords, newWordObj]);
   }
 
   function handleEnter(word) {
@@ -29,35 +28,18 @@ export default function GameBoard() {
     return (correctCharacters / totalCharacters) * 100;
   }
 
-  function generateNewWord() {
-    // Logic to generate a new word (e.g., from a predefined list or from an API call)
-    return "newWord";
-  }
-
-  function handleNewRound() {
-    const newWord = generateNewWord();
-    setCorrectWord(newWord);
-    setTypeWords([]);
-  }
-
   return (
     <div className={styles.gameBoard}>
-      <h2>Guess the Word !</h2>
       <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
 
       <div className={styles.typeWords}>
-        {typeWords.map((word, index) => (
+        {typeWords.map((wordObj, index) => (
           <div key={index} className={styles.appearedWord}>
-            {word}
+            {wordObj.string}{" "}
+            {typeof wordObj.parcentage === "number" ? wordObj.parcentage.toFixed(1) : "N/A"}%
           </div>
         ))}
       </div>
-
-      {/* <Scoreboard accuracy={calculateAccuracy()} /> */}
-
-      {/* <button className={styles.boardBtn} onClick={handleNewRound}>
-        Start New Round
-      </button> */}
     </div>
   );
 }
