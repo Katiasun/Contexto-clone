@@ -5,27 +5,23 @@ import Scoreboard from "../scoreboard/Scoreboard";
 
 export default function GameBoard() {
   const [guessedWord, setGuessedWord] = useState("");
-  const [correctWord, setCorrectWord] = useState("example");
+  const [correctWord, setCorrectWord] = useState("head");
   const [typeWords, setTypeWords] = useState([]);
 
-  function handleInputChange(word) {
-    // setGuessedWord(event.target.value);
-    const newWordObj = {
-      string: word,
-      parcentage: Math.random() * 100,
-    };
-    setTypeWords([...typeWords, newWordObj]);
+  function handleInputChange(event) {
+    setGuessedWord(event.target.value);
   }
 
   function handleEnter(word) {
-    setTypeWords([...typeWords, word]);
-  }
-  function calculateAccuracy() {
-    const totalCharacters = correctWord.length;
-    const correctCharacters = guessedWord
-      .split("")
-      .filter((char, index) => char === correctWord[index]).length;
-    return (correctCharacters / totalCharacters) * 100;
+    if (word.trim() !== "") {
+      const accuracy = Math.round(Math.random() * 100);
+      const newWordObj = {
+        string: word,
+        percentage: accuracy,
+      };
+      setTypeWords([...typeWords, newWordObj]);
+      setGuessedWord("");
+    }
   }
 
   return (
@@ -35,8 +31,8 @@ export default function GameBoard() {
       <div className={styles.typeWords}>
         {typeWords.map((wordObj, index) => (
           <div key={index} className={styles.appearedWord}>
-            {wordObj.string}{" "}
-            {typeof wordObj.parcentage === "number" ? wordObj.parcentage.toFixed(1) : "N/A"}%
+            <span className={styles.word}>{wordObj.string}</span>
+            <span className={styles.percentage}>{wordObj.percentage}%</span>
           </div>
         ))}
       </div>

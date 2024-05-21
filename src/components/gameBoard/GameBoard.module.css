@@ -23,6 +23,10 @@
   align-items: center;
   font-weight: bold;
   text-align: left;
+  padding: 7px;
+  margin-bottom: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* Styles for desktop */
