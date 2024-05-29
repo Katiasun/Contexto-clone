@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./GameBoard.module.css";
 import PlayerInput from "../playerInput/PlayerInput";
-import Scoreboard from "../scoreboard/Scoreboard";
 
 export default function GameBoard() {
-  const [guessedWord, setGuessedWord] = useState("");
-  const [correctWord, setCorrectWord] = useState("head");
-  const [typeWords, setTypeWords] = useState([]);
-
-  function handleInputChange(event) {
-    setGuessedWord(event.target.value);
-  }
+  const [typedWords, setTypedWords] = useState([]);
 
   function handleEnter(word) {
     if (word.trim() !== "") {
@@ -19,20 +12,29 @@ export default function GameBoard() {
         string: word,
         percentage: accuracy,
       };
-      setTypeWords([...typeWords, newWordObj]);
-      setGuessedWord("");
+      setTypedWords([newWordObj, ...typedWords]);
     }
   }
 
+  // function getBackgroundColor(percentage) {
+  //   const red = Math.max(255 - percentage * 2.55, 0);
+  //   const green = Math.min(percentage * 2.55, 255);
+  //   return `rgb(${red}, ${green}, 0)`;
+  // }
+
   return (
     <div className={styles.gameBoard}>
-      <PlayerInput value={guessedWord} onChange={handleInputChange} onEnter={handleEnter} />
+      <PlayerInput onEnter={handleEnter} />
 
       <div className={styles.typeWords}>
-        {typeWords.map((wordObj, index) => (
-          <div key={index} className={styles.appearedWord}>
-            <span className={styles.word}>{wordObj.string}</span>
-            <span className={styles.percentage}>{wordObj.percentage}%</span>
+        {typedWords.map((wordObj, index) => (
+          <div
+            className={styles.appearedWord}
+            key={index}
+            style={{ "--percent": `${wordObj.percentage}%` }}
+          >
+            <div>{wordObj.string}</div>
+            <div>{wordObj.percentage}%</div>
           </div>
         ))}
       </div>
