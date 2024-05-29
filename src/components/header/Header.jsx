@@ -6,7 +6,7 @@ export default function Header() {
       <h1 className={styles.headerTitle}>Contexto</h1>
       <div className={styles.numbersBlock}>
         <p>
-          Game: <span>#666</span>
+          Game: <span>#612</span>
         </p>
         <p>
           Guesses: <span></span>

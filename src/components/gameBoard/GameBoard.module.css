@@ -1,32 +1,25 @@
 /* Styles for mobile */
-.boardBtn {
-  width: 50%;
-  display: inline-block;
-  padding: 10px;
-  margin-top: 15px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  background: #ff5100;
-  transition: background-color 0.3s ease;
-}
-.boardBtn:hover {
-  background: #b33900;
-}
 .appearedWord {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
-  text-align: left;
+  position: relative;
+
   padding: 7px;
   margin-bottom: 25px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
+}
+.appearedWord::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: var(--percent);
+  background: rgb(245, 93, 5);
+  transition: background 0.5s ease-in;
 }
 
 /* Styles for desktop */
