@@ -20,12 +20,6 @@ export default function GameBoard() {
     }
   }
 
-  // function getBackgroundColor(percentage) {
-  //   const red = Math.max(255 - percentage * 2.55, 0);
-  //   const green = Math.min(percentage * 2.55, 255);
-  //   return `rgb(${red}, ${green}, 0)`;
-  // }
-
   return (
     <div className={styles.gameBoard}>
       <PlayerInput onEnter={handleEnter} />
