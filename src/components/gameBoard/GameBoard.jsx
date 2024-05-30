@@ -12,7 +12,11 @@ export default function GameBoard() {
         string: word,
         percentage: accuracy,
       };
-      setTypedWords([newWordObj, ...typedWords]);
+
+      const sortTypedWwords = [newWordObj, ...typedWords]
+        .sort((a, b) => b.percentage - a.percentage)
+        .slice(0, 4);
+      setTypedWords(sortTypedWwords);
     }
   }
 
