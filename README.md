@@ -1,3 +1,40 @@
+# Project name: "Contexto-clone"
+
+Contexto Clone is a clone of the popular game Contexto, where users try to guess a given word by entering various words and receiving feedback in the form of similarity percentages. Unlike the original game, in this project, the backend is not connected, so the similarity percentages are generated randomly for each word entered by the user.
+
+## Features
+
+- Users can enter words in a text field.
+- The program returns a random similarity percentage for the entered word.
+- Simple and intuitive graphical user interface.
+
+## Screenshot
+
+![Home page](img/homePage.png)
+![Home page](img/homePage2.png)
+![Menu](img/menu.png)
+![Accordion](img/accordion.png)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Katiasun/Contexto-clone.git
+   cd contexto-clone
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the project:
+   ```bash
+   npm start
+   ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
